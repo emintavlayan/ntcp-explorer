@@ -47,8 +47,8 @@ The bundle contains the server and compiled client assets. The host requires the
 Alternatively, build the supplied Docker image:
 
 ```sh
-docker build -t risk-based-radiotherapy-planning .
-docker run --rm -p 8080:8080 risk-based-radiotherapy-planning
+docker build -t ntcp-explorer .
+docker run --rm -p 8080:8080 ntcp-explorer
 ```
 
 ## Verification

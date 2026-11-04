@@ -3,8 +3,8 @@ module Server.Tests
 open System
 open Expecto
 open Shared
-open RiskBasedRadiotherapyPlanning
-open RiskBasedRadiotherapyPlanning.Domain
+open NtcpExplorer
+open NtcpExplorer.Domain
 
 /// Extracts a successful workflow result or fails the current test with its error.
 let private requireOk = function

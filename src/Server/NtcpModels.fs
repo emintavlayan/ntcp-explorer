@@ -1,7 +1,7 @@
-module RiskBasedRadiotherapyPlanning.NtcpModels
+module NtcpExplorer.NtcpModels
 
 open Shared
-open RiskBasedRadiotherapyPlanning.Domain
+open NtcpExplorer.Domain
 
 /// Represents a published equation with its canonical input and catalogue definition.
 type NtcpModel = { Organ: Organ; Response: DoseResponse; Definition: ModelDefinition }

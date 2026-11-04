@@ -3,7 +3,7 @@ module Server
 open SAFE
 open Saturn
 open Shared
-open RiskBasedRadiotherapyPlanning
+open NtcpExplorer
 open Fable.Remoting.Server
 
 /// Creates the typed API around the pure calculation workflow.

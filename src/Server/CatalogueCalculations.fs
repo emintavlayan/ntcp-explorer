@@ -1,10 +1,10 @@
-module RiskBasedRadiotherapyPlanning.CatalogueCalculations
+module NtcpExplorer.CatalogueCalculations
 
 open System
 open FsToolkit.ErrorHandling
 open Shared
-open RiskBasedRadiotherapyPlanning.Domain
-open RiskBasedRadiotherapyPlanning.NtcpModels
+open NtcpExplorer.Domain
+open NtcpExplorer.NtcpModels
 
 /// Represents the published model IDs with unambiguous evaluable dose-response mathematics.
 let executableIds =

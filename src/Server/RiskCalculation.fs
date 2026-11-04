@@ -1,9 +1,9 @@
-module RiskBasedRadiotherapyPlanning.RiskCalculation
+module NtcpExplorer.RiskCalculation
 
 open FsToolkit.ErrorHandling
 open Shared
-open RiskBasedRadiotherapyPlanning.Domain
-open RiskBasedRadiotherapyPlanning.NtcpModels
+open NtcpExplorer.Domain
+open NtcpExplorer.NtcpModels
 
 /// Calculates a plan marker and curve from the same published equation.
 let private endpoint (plan: ValidatedPlan) (model: NtcpModel) =

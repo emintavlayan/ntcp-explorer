@@ -290,7 +290,7 @@ let view model dispatch =
         Html.header [ prop.className "app-header"; prop.children [
             Html.a [ prop.className "brand"; prop.href "#"; prop.onClick (fun event -> event.preventDefault (); dispatch (Navigate Calculator)); prop.children [
                 brandMark
-                Html.div [ Html.strong "Risk-Based"; Html.span "Radiotherapy Planning" ]
+                Html.div [ Html.strong "NTCP"; Html.span "Explorer" ]
             ] ]
             Html.nav [ prop.className "main-nav"; prop.ariaLabel "Main navigation"; prop.children [
                 Html.button [ prop.className (if model.Page = Calculator then "nav-item active" else "nav-item"); prop.onClick (fun _ -> dispatch (Navigate Calculator)); prop.text "Calculator" ]

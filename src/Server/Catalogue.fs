@@ -1,7 +1,7 @@
-module RiskBasedRadiotherapyPlanning.Catalogue
+module NtcpExplorer.Catalogue
 
 open Shared
-open RiskBasedRadiotherapyPlanning.NtcpModels
+open NtcpExplorer.NtcpModels
 
 /// Represents the canonical paper used to transcribe this catalogue.
 let private brodin = "Brodin et al., IJROBP 2014;88:433–445, Table 1 (online 2013)."

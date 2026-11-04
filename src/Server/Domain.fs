@@ -1,4 +1,4 @@
-module RiskBasedRadiotherapyPlanning.Domain
+module NtcpExplorer.Domain
 
 open System
 open FsToolkit.ErrorHandling
