@@ -109,7 +109,7 @@ module Example =
     /// Represents synthetic patient data loaded on startup for the demonstration.
     let plan = {
         PlanLabel = "Example plan"; AgeAtPlanCreation = 42.0; Sex = Female
-        MeanHeartDoseGy = 18.0; MeanLungDoseGy = 14.0; MeanLiverDoseGy = 26.0
+        MeanHeartDoseGy = 18.0; MeanLungDoseGy = 14.0; MeanLiverDoseGy = 34.0
         AvailableOarIds = [ "heart"; "lungs"; "liver" ]
         CardiacRiskFactors = false; Chemotherapy = true
     }

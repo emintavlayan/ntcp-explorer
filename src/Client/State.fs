@@ -46,7 +46,7 @@ let api = Api.makeProxy<IRiskApi> ()
 /// Converts synthetic example values into editable form fields.
 let exampleForm () = {
     Label = Example.plan.PlanLabel; Age = "42"; Sex = Example.plan.Sex
-    Heart = "18.0"; Lung = "14.0"; Liver = "26.0"; AvailableOars = Example.plan.AvailableOarIds
+    Heart = "18.0"; Lung = "14.0"; Liver = "34.0"; AvailableOars = Example.plan.AvailableOarIds
     CardiacRiskFactors = Example.plan.CardiacRiskFactors; Chemotherapy = Example.plan.Chemotherapy
 }
 
