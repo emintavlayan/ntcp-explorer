@@ -1,8 +1,10 @@
-# Risk-Based Radiotherapy Planning
+# NTCP Explorer
+
+**Work in progress — research prototype.** Features, model coverage and interfaces may change. The application has not been validated for clinical decisions.
 
 An F# / SAFE Stack application for evaluating radiotherapy plans using published normal tissue complication probability (NTCP) models, patient characteristics, and clinical risk factors.
 
-The initial research focus is lymphoma. The intended workflow combines plan dosimetry with evidence-based models to present endpoint-specific risk estimates and support treatment-planning decisions.
+NTCP Explorer is a standalone calculator and source-linked catalogue for published NTCP and related dose-response models. Manual inputs are implemented; read-only ESAPI extraction remains planned.
 
 ## Current status
 
@@ -12,7 +14,7 @@ The research prototype includes a manual-entry calculator, **21 executable dose-
 
 The calculator now uses **a single lean view**: explicit Heart/Lungs/Liver Dmean inputs (Gy), dose-response graph **above** an endpoint table, and the absolute NTCP reduction for a 1 Gy dose decrease (`ΔNTCP (−1 Gy)`, percentage points). The graph is the primary workspace, with selectable organ curves; model descriptions and full equations remain in the 29-entry catalogue. Unused patient fields and explanatory text no longer occupy the main page; the previous detailed components remain in the source rather than being deleted.
 
-The adaptive plot follows the live dose/risk markers; Full range remains fixed for comparison. **A decrease in endpoint-specific NTCP is not the same as life-years gained.**
+The adaptive plot follows the live dose/risk markers; Full range remains fixed for comparison. Each displayed change remains specific to its endpoint and model.
 
 See [Lean plot-first interface decisions](docs/CLINICAL-FOCUS.md). All NTCP calculations remain server-owned F# functions.
 
@@ -20,8 +22,8 @@ See [Lean plot-first interface decisions](docs/CLINICAL-FOCUS.md). All NTCP calc
 
 The calculator includes:
 
-- A patient and plan section containing age at plan creation, recorded sex, and the dosimetric inputs required by each model.
-- A clinical factors section with clearly labelled selections and toggles.
+- A compact main calculator with explicit heart, lung and liver mean-dose inputs.
+- A catalogue runner with model-specific dosimetric and clinical inputs.
 - A source-linked 29-entry Brodin Table 1 catalogue: 21 executable model equations (including RR/OR as distinct outputs) and 8 blocked/evidence-only entries.
 - Interactive dose-response curves with a marker showing the current plan's input and estimated risk. A manual available-OAR selector controls which implemented models the server evaluates; the catalogue can be filtered independently by organ.
 
@@ -52,14 +54,10 @@ Manual entry and ESAPI import will feed the same calculation workflow. Patient a
 
 ## Planned direction
 
-1. Confirm source-specific contour and clinical-input conventions and implement the eight currently blocked/evidence-only models only if adequate original data become available. Model uncertainty and external clinical validation remain future research.
-2. ESAPI extraction and structure-name / DVH-metric mapping.
-3. Comparison of multiple plans and their individual endpoint estimates.
-4. Life-years-lost calculations with the required survival, prognosis, and competing-risk data.
-5. Planning suggestions and automated generation of deliverable alternatives.
-6. Clinical evaluation of plan trade-offs, including patient preferences.
-
-Life years lost is one outcome within the broader risk profile. Endpoint probabilities, relative risks, and life-years-lost estimates retain their own meanings and units.
+1. Confirm source-specific contour and clinical-input conventions; implement blocked models only when adequate source data become available.
+2. Add read-only ESAPI extraction with explicit structure-name and DVH-metric mapping.
+3. Compare plans while keeping endpoint estimates and risk measures distinct.
+4. Investigate model uncertainty and independent numerical and clinical validation.
 
 ## Run locally
 
@@ -120,7 +118,6 @@ A multi-stage [Dockerfile](Dockerfile) is included for server hosting. The [demo
 ## Scientific starting points
 
 - [Brodin et al. (2014): Interactive decision-support tool for risk-based radiation therapy plan comparison for Hodgkin lymphoma](https://doi.org/10.1016/j.ijrobp.2013.10.028).
-- [Brodin et al. (2012): Life years lost — comparing potentially fatal late complications after radiotherapy for pediatric medulloblastoma on a common scale](https://pmc.ncbi.nlm.nih.gov/articles/PMC3402656/).
 
 ## SAFE Stack
 
