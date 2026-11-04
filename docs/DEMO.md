@@ -1,4 +1,6 @@
-# Demonstrating the prototype
+# Demonstrating NTCP Explorer
+
+**Work in progress — NTCP Explorer research prototype.** Model coverage, interfaces and documentation may change; clinical validation is pending.
 
 ## Run locally
 
@@ -13,13 +15,13 @@ Open <http://localhost:8080>. The application loads a synthetic example automati
 
 ## A short demonstration
 
-1. Show the patient and plan inputs, clinical-factor switches, three dose-response curves, and current-plan markers.
-2. Change mean lung dose from 14 Gy to 20 Gy. The lung marker moves along the same published curve and its estimate changes from approximately 10.85% to 20.59%.
-3. Select **Detail** to inspect the lower-dose portion of the curves; **Full range** restores the complete mathematical display range.
-4. Open **NTCP models**. Select heart, lungs, or liver to inspect the description, equation, coefficient values and units, model context, and publication links.
-5. Return to **Calculator**. Inputs are preserved. **Reset example** restores all initial values.
+1. Show the heart, lung and liver mean-dose inputs, selectable dose-response curves, plan markers and endpoint table.
+2. Change mean lung dose from 14 Gy to 20 Gy. Inspect the marker and endpoint estimate returned by the server.
+3. Compare the adaptive plot with **Full range**; the latter restores the fixed mathematical display range.
+4. Open **NTCP models** to inspect source-linked equations, coefficients, units, required inputs and implementation status across the catalogue.
+5. Evaluate an implemented model in the catalogue runner with its required inputs, then return to **Calculator** to confirm the calculator inputs are preserved.
 
-The three example equations are dose-only. Age, recorded sex, cardiac risk factors, and chemotherapy are represented in the form, but do not introduce unsupported effects into these equations. This is stated beside the controls.
+The main calculator's three equations use dose only. Additional catalogue models require their own explicit clinical and dosimetric inputs. Relative-risk and odds-ratio outputs retain their original scales.
 
 The outputs concern different endpoints and follow-up periods. They are not summed, and their percentages are not presented as equivalent measures of clinical severity.
 
