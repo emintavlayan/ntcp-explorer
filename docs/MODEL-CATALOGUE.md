@@ -1,5 +1,7 @@
 # Brodin Table 1 model catalogue
 
+**Work in progress — NTCP Explorer research prototype.** Model coverage, interfaces and documentation may change; clinical validation is pending.
+
 ## Source and scope
 
 **Brodin et al.** *Interactive Decision-Support Tool for Risk-Based Radiation Therapy Plan Comparison for Hodgkin Lymphoma*. International Journal of Radiation Oncology • Biology • Physics. 2014;88:433–445 (published online in 2013). [DOI](https://doi.org/10.1016/j.ijrobp.2013.10.028), **Table 1, pages 435–436**.
