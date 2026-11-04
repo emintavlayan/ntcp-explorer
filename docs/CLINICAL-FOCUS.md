@@ -1,5 +1,7 @@
 # Lean, plot-first NTCP calculator
 
+**Work in progress — NTCP Explorer research prototype.** Model coverage, interfaces and documentation may change; clinical validation is pending.
+
 ## Single-view design
 
 The application now shows one calculator presentation: **dosimetric inputs on the left; the dose-response graph first and a compact endpoint table below it on the right**. No separate Clinical focus / Research detail toggle is rendered. The original more verbose calculator components and the entire 29-entry research catalogue remain in the F# source, and the NTCP model catalogue is still accessible from the top navigation.
@@ -13,7 +15,7 @@ The application now shows one calculator presentation: **dosimetric inputs on th
 
 ## Scientific interpretation
 
-`ΔNTCP (−1 Gy)` is a **finite one-Gy decrease in the probability of its stated endpoint**. It is not mathematically the instantaneous derivative, nor an estimate of survival, quality-adjusted life-years, or life-years gained. Severity, competing mortality, follow-up horizons, and baseline risks differ among endpoint models; direct comparison of endpoint-specific percentage-point changes cannot establish which organ reduction maximizes life expectancy.
+`ΔNTCP (−1 Gy)` is a **finite one-Gy decrease in the probability of its stated endpoint**. It is a finite difference rather than an instantaneous derivative. Severity, follow-up horizons and baseline risks differ among endpoint models; endpoint-specific percentage-point changes must retain their model context.
 
 The present calculations are *research prototypes* using synthetic dosimetric examples, not a validated clinical decision-support system.
 
